@@ -1,0 +1,23 @@
+name = "aditstore-otp"
+main = "worker.js"
+compatibility_date = "2026-10-28"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "aditstore-db"
+database_id = "2acadc89-a2a8-447f-aeef-717e44529d8b"
+
+[vars]
+TRIPAY_MODE = "sandbox"
+TRIPAY_QRIS_METHOD = "QRIS2"
+SELL_MARKUP_PERCENT = "20"
+SELL_MARKUP_FIXED = "0"
+TOPUP_MIN = "5000"
+TOPUP_MAX = "5000000"
+# Use the exact email you will register with if you want this account to be admin.
+ADMIN_EMAIL = "tetewaditya55@gmail.com"
